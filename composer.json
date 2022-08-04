@@ -2,6 +2,7 @@
     "require": {
         "league/flysystem": "^1.0",
         "league/flysystem-aws-s3-v3": "^1.0",
-        "sistemi-etime/flysystem-plugin-aws-s3-v3": "^1.0"
+        "sistemi-etime/flysystem-plugin-aws-s3-v3": "^1.0",
+        "aws/aws-sdk-php": "^3.232"
     }
 }
