@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:  
+  s3:
+    container_name: minio
+    image: minio/minio
+    ports:
+      - 9000:9000
+      - 9001:9001
+    volumes:
+      - s3:/data
+    entrypoint: sh
+    command: -c 'mkdir -p /export/my-bucket && minio server /export --console-address ":9001"'
+    environment:
+      MINIO_ACCESS_KEY: access_key
+      MINIO_SECRET_KEY: secret_key
+      S3_BUCKET: my-bucket
+
+volumes:
+  s3:
